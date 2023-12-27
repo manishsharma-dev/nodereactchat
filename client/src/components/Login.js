@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form, ButtonGroup } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 function Login({ onIdSubmit }) {
@@ -21,8 +21,10 @@ function Login({ onIdSubmit }) {
                     <Form.Label>Enter Your ID</Form.Label>
                     <Form.Control type="text" ref={idRef} required />
                 </Form.Group>
-                <Button type="submit" className='me-2'>Login</Button>
-                <Button variant='secondary' onClick={createNewId}>Create A New Id</Button>
+                <ButtonGroup className='mt-2'>
+                    <Button type="submit" className='me-2'>Login</Button>
+                    <Button variant='secondary' onClick={createNewId}>Create A New Id</Button>
+                </ButtonGroup>
             </Form>
         </Container>
     )
