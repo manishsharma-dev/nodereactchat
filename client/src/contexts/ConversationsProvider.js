@@ -15,6 +15,10 @@ export function ConversationsProvider({ children }) {
             return [...prevConversations, { recipients, messages: [] }]
         })
     }
+
+    //function formattedConversations
+
+    
     return (
         <ConversationsContext.Provider value={{ conversations, createConversations }}>
             {children}
